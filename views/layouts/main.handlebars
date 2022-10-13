@@ -91,11 +91,11 @@
 <div class="mainBody">
 {{!-- Channel start here --}}
   <div class="row bodyDiv">
-      <div class="col-2 bg-secondary" >
+      <div class="col-2" >
           {{#each channel}}
           <div class="col">
             <div class="card">
-              <button class="card-body">
+              <button class="card-body bg-primary bg-gradient">
               <h5 class="card-title">{{id}}</h5>
               <p class="card-text">{{name}}</p>
               </button>
@@ -106,7 +106,7 @@
   {{!-- Channel end here --}}
   {{!-- *************************************************************************************** --}}
   {{!-- Message start here --}}
-      <div class=" col bg-secondary">
+      <div class=" col">
           {{{body}}}
       </div>
   </div>
