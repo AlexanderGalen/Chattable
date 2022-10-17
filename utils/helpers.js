@@ -1,6 +1,8 @@
 module.exports = {
   format_date: utcDate => {
-    const date = new Date(utcDate);
-    return `${date.toLocaleDateString()} ${date.toLocaleTimeString('en-US')}`;
+    const pacTime = Date.parse(utcDate) - 25200000;
+    const date = new Date(pacTime);
+
+    return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
   }
 };
