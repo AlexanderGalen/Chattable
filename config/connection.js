@@ -1,10 +1,10 @@
-const Sequelize = require('sequelize-cockroachdb');
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
 
-if (process.env.DB_URI) {
-  sequelize = new Sequelize(process.env.DB_URI);
+if (process.env.MYSQL_URL) {
+  sequelize = new Sequelize(process.env.MYSQL_URL);
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
