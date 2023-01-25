@@ -127,6 +127,12 @@ h3 {
 .nav-text {
     color: white;
     margin-right: 10px;
+
+}
+
+.app-title {
+    font-size: 1.8em !important;
+    font-weight: bold;
 }
 
 .card-body {
