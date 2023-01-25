@@ -1,6 +1,6 @@
-# Corgi Messenger
+# Chattable Messenger
 
-## Technology Used
+## Technologies Used
 * Node JS
 * Express
 * npm
@@ -15,26 +15,44 @@
 * Boot Strap
 
 ## Description
-* User can create an account and login
-* User can chat with any registered user
-* To create the channel with the other user, you just need to click on the user's card on the right hand side in the home screen
-* All the created channel will be display on the left hand size of the page
-* The previous chat history will be load as soon as you enter the channel
-* The message you sended will be display on the right hand size with the green card header
-* The message you received will be display on the left hand size with purple card header
-* All the message will be display the time the message sended
-* You can choice either light mode or dark mode on the top right corner toggle
+* Simple messenger application for instant messaging between registered users
+* Users are promted to log in or sign up upon entering the site.
+* Users can initiate a new chat with any other existing user
+* To create the channel with the other user, you just need to click on the user's card on the main portion of the homescreen labeled "Start a chat with:"
+* The new channel will be added to the list of existing channels (if any) on the left hand side of the page labeled "My Chats"
+* When you enter a channel, any previous chat history will be loaded and displayed.
+* Sent messages will be displayed on the right side with a green card header
+* Recieved messages will be displayed on the left side with a purple card header
+* Messages will in a timestamp of when the message was sent/recieved.
+* You can choose either a light theme or dark theme via a toggle in the top right corner
 * If you want to log out, you can click the log out option on the top right corner
 
 ## Setup/Installation
-* https://corgi-messenger.herokuapp.com/
+Just clone the repo:
+```
+git clone https://github.com/AlexanderGalen/Chattable.git
+```
+cd into the cloned directory, then run npm install
+```
+cd Chattable
+npm install
+```
+Install and make a user account for local MySQL development:
 
-## Known Bugs
-N/A
+Login to mysql on the command line and create a new database for the app to use. I use "chat_db".
+
+Create an .env file containing database login credientials in the following format: (make sure to exclude this .env file in your .gitignore so you don't publish your username and password for all to see!)
+
+```
+DB_NAME="databaseName"
+DB_USER="username"
+DB_PASSWORD="password"
+```
+Now you can run the development version of the site. Running ```npm start```  will set up the database tables and start a development server listening on localhost:3001. To observe the instant messaging locally, you can create an account and log in, then open a private browser window, create a new account, then initate a chat between these users. If both windows have the chat open, messages sent from one to the other will display instantly in the other browser window. 
+
 
 ## License
 MIT<br>
-Corgis brand/logo used with permission from Code with Corgis
 
 ## Team Members
 * Alexander Carr
@@ -43,44 +61,6 @@ Corgis brand/logo used with permission from Code with Corgis
 * Joon Park
 * Brain Zoulko 
 
-## User Story
-* As a user who want to chat with other user
-* I WANT a website chat application
-* SO THAT i can chat, check the previous chat history
-
-## Acceptance Criteria
-* Given a website chat application
-* WHEN I log in to the website
-* THEN I will be presented with homepage, which includes existing registered user, conversation with other user already created, log in, log out and dark mode feature
-* WHEN I click on the homepage option
-* THEN I am taken to the homepage
-* WHEN I click on any other links in the navigation before I log in
-* THEN I am prompted to either sign up or log in 
-* WHEN I choose to sign up
-* THEN I am prompted to create a username and password
-* WHEN I click on the sign-up button
-* THEN my user credentials are saved and I am logged into the site
-* WHEN I revisit the site at a later time and choose to sign in
-* THEN I am prompted to enter my username and password
-* WHEN I am signed in to the site
-* THEN I see navigation links for the homepage, conversation, and the option to log out
-* WHEN I click on the homepage option in the navigation
-* THEN I am taken to the homepage and presented with registered user, conversation already created
-* WHEN I click on an registered user
-* THEN I will create the conversation with this user
-* WHEN I click on the converation
-* THEN I will be redirect to the conversation page with this user and presented with previous chat history
-* WHEN I send message
-* THEN I will be present with the message on the right hand side of the screen with green card header and send time
-* WHEN I receive message
-* THEN I will be present with the message on the left hand side of the screen with purple card header and receive time
-* WHEN I click the dark mode toggle on the top right corner
-* THEN I will be present the application with dark mode
-* WHEN I click any button when I am in dark mode
-* THEN I will be present the dark mode in that page
-* WHEN I click log out 
-* THEN I will be log out
-
-Application URL: https://corgi-messenger.herokuapp.com/<br>
-GitHub URL: https://github.com/ricky8221/chat-project<br>
-![](public/image/screenshot.jpg)
+https://chat.alexandergalen.com/<br>
+![example-chat](screenshot.jpg)
+https://github.com/AlexanderGalen/Chattable
